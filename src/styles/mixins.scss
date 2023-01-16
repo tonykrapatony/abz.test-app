@@ -1,0 +1,17 @@
+@mixin primary-btn ($width, $height, $padding, $background-color, $border, $color){
+    width: $width;
+    height: $height;
+    padding: $padding;
+    background-color: $background-color;
+    border: $border;
+    color: $color;
+}
+
+@mixin input ($width, $height, $padding, $background-color, $border, $color){
+    width: $width;
+    height: $height;
+    padding: $padding;
+    background-color: $background-color;
+    border: $border;
+    color: $color;
+}

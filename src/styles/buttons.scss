@@ -1,0 +1,14 @@
+.btn {
+    border-radius: 80px;
+    line-height: 26px;
+}
+.primary-btn {
+    @include primary-btn($primary-btn-width, $primary-btn-height, $primary-btn-padding, $primary-btn-bg, $primary-btn-border, $primary-btn-color);
+    &:hover {
+        background-color: $primary-btn-bg-hover;
+    }
+    &:disabled {
+        pointer-events: none;
+        background-color: $primary-btn-bg-disabled;
+    }
+}

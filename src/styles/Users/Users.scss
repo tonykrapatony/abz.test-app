@@ -1,0 +1,85 @@
+.users-container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 140px 0 0 0;
+    .preloader {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        &.hiden {
+            display: none;
+        }
+        .img {
+            animation: rotate 1s ease-in 0s infinite normal;
+        }
+    }
+    .users-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 50px 0 21px;
+        @media screen and (max-width: 360px) {
+            padding: 50px 4.44% 21px;    
+        }
+        @media screen and (min-width: 361px) and (max-width: 768px) {
+            padding: 50px 4.166% 21px;    
+        }
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            padding: 50px 5.859% 21px;    
+        }
+        .users-item {
+            width: 31.6%;
+            padding: 20px;
+            margin-bottom: 29px;
+            background-color: $white;
+            border-radius: 10px;
+            @media screen and (max-width: 360px) {
+                width: 100%;   
+            }
+            @media screen and (min-width: 361px) and (max-width: 768px) {
+                width: 48.86%;
+            }
+            .item-img {
+                display: flex;
+                justify-content: center;
+                img {
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+            .item-name {
+                padding: 20px 0;
+            }
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-align: center;
+                color: $black;
+            }
+        }
+    }
+    .get-btn {
+        &.hiden {
+            display: none;
+        }
+        display: block;
+        padding: 4px 19px;
+        margin: 0 auto;
+        width: auto;
+        @extend .btn;
+        @extend .primary-btn;
+    }
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

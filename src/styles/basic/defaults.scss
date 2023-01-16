@@ -1,0 +1,35 @@
+$black:                     rgba(0, 0, 0, 0.87);
+$white:                     #fff;
+$gray:                      #D0CFCF;
+$darker-gray:               #B4B4B4;
+$darkest-gray:              #7E7E7E;
+$light-gray:                #f8f8f8;
+$yellow:                    #f4e041;
+$light-yellow:              #FFE302;
+$blue:                      #00bdd3;
+$red:                       #CB3D40;
+
+$primary-color:               $yellow;
+$secondary-color:             $blue;
+
+
+$primary-btn-bg: $primary-color; 
+$primary-btn-color: $black; 
+$primary-btn-padding: 4px 0; 
+$primary-btn-width: 100px; 
+$primary-btn-height: 34px; 
+$primary-btn-border: none; 
+
+$primary-btn-bg-hover: $light-yellow; 
+
+$primary-btn-bg-disabled: $darker-gray; 
+
+$input-bg: transparent; 
+$input-color: $black; 
+$input-padding: 14px 16px; 
+$input-width: 380px; 
+$input-height: 54px; 
+$input-border: 1px solid $gray; 
+$input-border-radius: 4px; 
+
+$font-family:  'Nunito', sans-serif;

@@ -1,0 +1,93 @@
+.header {
+    width: 100%;
+    .navbar-container {
+        width: 100%;
+        background-color: $white;
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1170px;
+            padding: 13px 0;
+            margin: 0 auto;
+            @media screen and (min-width: 769px) and (max-width: 1024px) {
+                padding: 13px 60px;
+            }
+            @media screen and (min-width: 451px) and (max-width: 768px) {
+                padding: 13px 32px;
+            }
+            @media screen and (max-width: 450px) {
+                padding: 13px 16px;
+            }
+            .btn {
+                margin-left: 10px;
+            }
+        }
+    }
+    .banner {
+        position: relative;
+        width: 1170px;
+        max-width: 100%;
+        height: 650px;
+        padding: 164px 0;
+        margin: 0 auto;
+        @media screen and (min-width: 451px) and (max-width: 768px) {
+            height: 500px;
+            padding: 89px 0;
+        }
+        @media screen and (max-width: 450px) {
+            height: 500px;
+            padding: 40px 0 71px;
+        }
+        .banner-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../public/img/img.jpeg') no-repeat;
+            background-size: 225%;
+            background-position: 50% 80%;
+            z-index: -1;
+            @media screen and (min-width: 1025px) and (max-width: 1150px) {
+                background-size: 250%;
+            }
+            @media screen and (min-width: 769px) and (max-width: 1024px) {
+                background-size: 280%;
+                background-position: 50% 80%;
+            }
+            @media screen and (min-width: 600px) and (max-width: 768px) {
+                background-size: 250%;
+            }
+            @media screen and (min-width: 450px) and (max-width: 599px) {
+                background-size: 300%;
+                background-position: 50% 85%;
+            }
+            @media screen and (min-width: 300px) and (max-width: 449px) {
+                background-size: 320%;
+                background-position: 50% 100%;
+            }
+        }
+        .banner-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media screen and (max-width: 450px) {
+                padding: 0 16px;
+            }
+            .h1, p {
+                max-width: 380px;
+                color: $white;
+            }
+            .h1 {
+                padding-bottom: 21px;
+                text-align: center;
+            }
+            p {
+                padding-bottom: 32px;
+                text-align: center;
+            }
+        }
+    }
+}

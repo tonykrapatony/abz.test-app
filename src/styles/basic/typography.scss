@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Nunito', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Nunito&display=swap') format('woff2');
+    font-weight: 400;
+}
+
+body {
+    font-family: $font-family;
+}
+
+.h1 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}

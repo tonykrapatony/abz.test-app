@@ -1,0 +1,181 @@
+.post-block {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 140px 0 100px;
+    .post_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        @media screen and (max-width:400px) {
+            padding: 50px 16px 0;
+        }
+        &.hide {
+            display: none;
+        }
+        .input_container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 50px;
+            @media screen and (max-width:400px) {
+                width: 100%;
+            }
+            label.input_label {
+                display: none;
+                position: absolute;
+                top: -6px;
+                left: 16px;
+                padding: 0 4px;
+                background-color: $light-gray;
+                color: $darkest-gray;
+                font-size: 12px;
+                line-height: 14px;
+            }
+            .form-input {
+                &.error {
+                    border: 2px solid $red;
+                    &:focus ~ label.input_label{
+                        color: $red;
+                    }
+                }
+                &:focus ~ label.input_label{
+                    display: block;
+                }
+            }
+            span.error {
+                padding: 4px 16px 0;
+                font-size: 12px;
+                line-height: 14px;
+                color: $red;
+            }
+            &.phone_input {
+                .phone_ex {
+                    display: block;
+                    padding: 4px 16px;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: $darkest-gray;
+                }
+
+            }
+            &.select_file {
+                .label {
+                    position: absolute;
+                    left: 0;
+                    width: 83px;
+                    height: 54px;
+                    border: 1px solid $black;
+                    border-radius: 4px 0px 0px 4px;
+                    line-height: 54px;
+                    text-align: center;
+                }
+                .fileLabel {
+                    position: absolute;
+                    left: 99px;
+                    font-size: 16px;
+                    line-height: 54px;
+                    color: $darkest-gray;
+                }
+                .form-control {
+                    border-radius: 4px;
+                    outline: none;
+                    @extend .form-input;
+                    padding: 0;
+                    color: transparent;
+                    &:valid ~ .fileLabel {
+                        color: $black;
+                    }
+                    &::file-selector-button {
+                        color: transparent;
+                        width: 83px;
+                        height: 100%;
+                        margin: 0 16px 0 0;
+                        font-size: 16px;
+                        line-height: 26px;
+                    }
+                    &:focus, &:hover, &:active {
+                        outline: none;
+                    }
+                }
+                &.error {
+                    .label {
+                        border: 2px solid $red;
+                    }
+                    .form-control {
+                        border: 2px solid $red;
+                        &::file-selector-button {
+                            color: transparent;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+        .select_position {
+            width: 380px;
+            margin-top: -25px;
+            margin-bottom: 50px;
+            @media screen and (max-width:400px) {
+                width: 100%;
+            }
+            p {
+                margin-bottom: 11px;
+            }
+            .form-check {
+                display: flex;
+                align-items: center;
+                margin-bottom: 7px;
+                &:last-child {
+                    margin-bottom: 40px;
+                }
+                &-input {
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 12px;
+                    border-color: $gray;
+                    box-shadow: none;
+                    &:checked[type=radio] {
+                        border-color: $blue;
+                        background-color: $white;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 4px;
+                            left: 4px;
+                            width: 10px;
+                            height: 10px;
+                            background-color: $blue;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                &-label {
+                    font-size: 16px;
+                    line-height: 26px; 
+                }
+            }
+            span.error {
+                padding: 4px 16px 0;
+                font-size: 12px;
+                line-height: 14px;
+                color: $red;
+            }
+        }
+    }
+    .success_block {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 50px;
+        &.show {
+            display: flex;
+        }
+        .img {
+            margin-top: 50px;
+        }
+    }
+}
